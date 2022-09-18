@@ -6,17 +6,18 @@ Console.WriteLine("Введите значения массива через п�
 string words = Console.ReadLine();
 string[] massive  = words.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 Console.Write($"[{String.Join("; ", massive)}]");
+Console.WriteLine();
 
-string[] result = new string [massive.GetLength];
+string[] result = new string [massive.Length];
 int x = 0;
 
-for (int i = 0; i < massive.GetLength; i++)
+for (int i = 0; i < massive.Length; i++)
 {
     if (massive[i].Length <= 3)
     {
-      massive[i] = result[x];
+      result[x] = massive[i];
       x++;  
     }
 }
 
-Console.Write($"{String.Join("; ", result)}");
+Console.WriteLine($"{String.Join("; ", result)}");
