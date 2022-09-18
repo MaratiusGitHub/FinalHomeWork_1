@@ -5,7 +5,6 @@
 Console.WriteLine("Введите значения массива через пробел");
 string words = Console.ReadLine();
 string[] massive  = words.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-Console.Write($"[{String.Join("; ", massive)}]");
 Console.WriteLine();
 
 string[] result = new string [massive.Length];
@@ -20,4 +19,4 @@ for (int i = 0; i < massive.Length; i++)
     }
 }
 
-Console.WriteLine($"{String.Join("; ", result)}");
+Console.WriteLine($"[{String.Join(" ", result)}]");
